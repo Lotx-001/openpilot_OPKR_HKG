@@ -63,8 +63,8 @@ class CAR:
   K7_HEV_YG = "KIA K7 2016-19 HYBRID (YG)"
   K7_YG_20 = "KIA K7 20 (YG)"
   K7_HEV_YG_20 = "KIA K7 HYBRID 20 (YG)"
-  K8_EX_21 = "KIA K8 EX 2021-23 (EX)"
-  K8_EX_HEV_21 "KIA K8 HYBRID 2021-23 (EX)"
+  K8_EX = "KIA K8 EX 2021-23 (EX)"
+  K8_EX_HEV "KIA K8 EX HYBRID 2021-23 (EX)"
   SELTOS_SP2 = "KIA SELTOS (SP2)"
   SOUL_EV_SK3 = "KIA SOUL EV (SK3)"
   MOHAVE_HM = "KIA MOHAVE (HM)"
@@ -131,8 +131,8 @@ CAR_INFO: Dict[str, Union[HyundaiCarInfo, List[HyundaiCarInfo]]] = {
   CAR.K7_HEV_YG: HyundaiCarInfo("Kia K7 Hybrid 2016-19", harness=Harness.hyundai_c),
   CAR.K7_YG_20: HyundaiCarInfo("Kia K7 20", harness=Harness.hyundai_k),
   CAR.K7_HEV_YG_20: HyundaiCarInfo("Kia K7 Hybrid 20", harness=Harness.hyundai_k),
-  CAR.K8_EX_21: HyundaiCarInfo("Kia K8 2021-23", harness=Harness.hyundai_k),
-  CAR.K8_EX_HEV_21: HyundaiCarInfo("Kia K8 Hybrid 2021-23", harness=Harness.hyundai_k),
+  CAR.K8_EX: HyundaiCarInfo("Kia K8 2021-23", harness=Harness.hyundai_k),
+  CAR.K8_EX_HEV: HyundaiCarInfo("Kia K8 Hybrid 2021-23", harness=Harness.hyundai_k),
   CAR.SELTOS_SP2: HyundaiCarInfo("Kia Seltos 2021", harness=Harness.hyundai_a),
   CAR.SOUL_EV_SK3: HyundaiCarInfo("Kia Soul EV 2019"),
   CAR.MOHAVE_HM: HyundaiCarInfo("Kia Mohave 2019"),
@@ -416,9 +416,9 @@ FINGERPRINTS = {
   }],
   CAR.K7_HEV_YG_20: [{
   }],
-  CAR.K8_EX_21: [{
+  CAR.K8_EX: [{
   }],
-  CAR.K8_EX_HEV_21: [{
+  CAR.K8_EX_HEV: [{
   }],
   CAR.SELTOS_SP2: [{
     67: 8, 127: 8, 304: 8, 320: 8, 339: 8, 356: 4, 524: 8, 544: 8, 593: 8, 608: 8, 688: 6, 809: 8, 832: 8, 854: 8, 870: 7, 871: 8, 872: 8, 897: 8, 902: 8, 905: 8, 909: 8, 910: 5, 911: 5, 913: 8, 916: 8, 1040: 8, 1042: 8, 1056: 8, 1057: 8, 1064: 8, 1078: 4, 1102: 8, 1107: 5, 1114: 8, 1136: 8, 1145: 8, 1151: 8, 1155: 8, 1156: 8, 1157: 4, 1162: 8, 1164: 8, 1168: 8, 1170: 8, 1173: 8, 1186: 2, 1191: 2, 1225: 8, 1265: 4, 1280: 8, 1287: 4, 1290: 8, 1292: 8, 1294: 8, 1312: 8, 1322: 8, 1342: 6, 1345: 8, 1348: 8, 1363: 8, 1369: 8, 1379: 8, 1384: 8, 1394: 8, 1407: 8, 1419: 8, 1427: 6, 1446: 8, 1456: 4, 1470: 8, 1485: 8, 1988: 8, 1996: 8, 2000: 8, 2004: 8, 2008: 8, 2012: 8, 2015: 8
@@ -761,12 +761,12 @@ CHECKSUM = {
 
 FEATURES = {
   # Use Cluster for Gear Selection, rather than Transmission
-  "use_cluster_gears": {CAR.AVANTE_AD, CAR.KONA_OS, CAR.I30_PD, CAR.K7_YG, CAR.GRANDEUR_IG, CAR.GRANDEUR_FL_IG, CAR.K7_YG_20, CAR.K8_EX_21},
+  "use_cluster_gears": {CAR.AVANTE_AD, CAR.KONA_OS, CAR.I30_PD, CAR.K7_YG, CAR.GRANDEUR_IG, CAR.GRANDEUR_FL_IG, CAR.K7_YG_20, CAR.K8_EX},
   # Use TCU Message for Gear Selection
   "use_tcu_gears": {CAR.K5_JF, CAR.SONATA_LF, CAR.VELOSTER_JS, CAR.SONATA_TURBO_LF, CAR.STINGER_CK},
   # Use E_GEAR Message for Gear Selection
   "use_elect_gears": {CAR.SONATA_HEV_DN8, CAR.SONATA_HEV_LF, CAR.KONA_EV_OS, CAR.KONA_HEV_OS, CAR.IONIQ_EV_AE, CAR.IONIQ_HEV_AE, CAR.GRANDEUR_HEV_IG, CAR.GRANDEUR_HEV_FL_IG, CAR.NEXO_FE,
-                      CAR.K5_HEV_JF, CAR.K7_HEV_YG, CAR.NIRO_EV_DE, CAR.NIRO_HEV_DE, CAR.SOUL_EV_SK3, CAR.AVANTE_HEV_CN7, CAR.SANTAFE_HEV_TM, CAR.K7_HEV_YG_20, CAR.K8_EX_HEV_21},
+                      CAR.K5_HEV_JF, CAR.K7_HEV_YG, CAR.NIRO_EV_DE, CAR.NIRO_HEV_DE, CAR.SOUL_EV_SK3, CAR.AVANTE_HEV_CN7, CAR.SANTAFE_HEV_TM, CAR.K7_HEV_YG_20, CAR.K8_EX_HEV},
 
   # send LFA MFA message for new HKG models
   # Insert your car in this if you want turn LFA icon on.
@@ -777,10 +777,10 @@ FEATURES = {
   "send_hda_mfa": {CAR.GRANDEUR_IG, CAR.GRANDEUR_HEV_IG},
   # these cars use the FCA11 message for the AEB and FCW signals, all others use SCC12
   # Insert your car in this if you see front collision error on your cluster.
-  "use_fca": {CAR.GRANDEUR_HEV_FL_IG, CAR.GRANDEUR_FL_IG, CAR.SONATA_DN8, CAR.AVANTE_CN7, CAR.I30_PD, CAR.PALISADE_LX2, CAR.GENESIS_G70_IK, CAR.GENESIS_G70_2020, CAR.GENESIS_G90_HI, CAR.KONA_HEV_OS, CAR.KONA_EV_OS, CAR.SELTOS_SP2, CAR.MOHAVE_HM, CAR.KIA_FORTE, CAR.K7_YG_20, CAR.K8_EX_21},
+  "use_fca": {CAR.GRANDEUR_HEV_FL_IG, CAR.GRANDEUR_FL_IG, CAR.SONATA_DN8, CAR.AVANTE_CN7, CAR.I30_PD, CAR.PALISADE_LX2, CAR.GENESIS_G70_IK, CAR.GENESIS_G70_2020, CAR.GENESIS_G90_HI, CAR.KONA_HEV_OS, CAR.KONA_EV_OS, CAR.SELTOS_SP2, CAR.MOHAVE_HM, CAR.KIA_FORTE, CAR.K7_YG_20, CAR.K8_EX},
 }
 
-HYBRID_CAR = {CAR.K5_HEV_JF, CAR.IONIQ_HEV_AE, CAR.SONATA_HEV_DN8, CAR.SONATA_HEV_LF, CAR.K7_HEV_YG, CAR.GRANDEUR_HEV_IG, CAR.GRANDEUR_HEV_FL_IG, CAR.NIRO_HEV_DE, CAR.KONA_HEV_OS, CAR.AVANTE_HEV_CN7, CAR.K7_HEV_YG_20, CAR.K8_EX_HEV_21}
+HYBRID_CAR = {CAR.K5_HEV_JF, CAR.IONIQ_HEV_AE, CAR.SONATA_HEV_DN8, CAR.SONATA_HEV_LF, CAR.K7_HEV_YG, CAR.GRANDEUR_HEV_IG, CAR.GRANDEUR_HEV_FL_IG, CAR.NIRO_HEV_DE, CAR.KONA_HEV_OS, CAR.AVANTE_HEV_CN7, CAR.K7_HEV_YG_20, CAR.K8_EX_HEV}
 EV_CAR = {CAR.IONIQ_EV_AE, CAR.KONA_EV_OS, CAR.NIRO_EV_DE, CAR.NEXO_FE, CAR.SOUL_EV_SK3}
 
 if Params().get_bool("UseRadarTrack"):
@@ -831,8 +831,8 @@ if Params().get_bool("UseRadarTrack"):
     CAR.K7_HEV_YG: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.K7_YG_20: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.K7_HEV_YG_20: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
-    CAR.K8_EX_21: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
-    CAR.K8_EX_HEV_21: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
+    CAR.K8_EX: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
+    CAR.K8_EX_HEV: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.SELTOS_SP2: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.SOUL_EV_SK3: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.MOHAVE_HM: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
@@ -885,8 +885,8 @@ else:
     CAR.K7_HEV_YG: dbc_dict('hyundai_kia_generic', None),
     CAR.K7_YG_20: dbc_dict('hyundai_kia_generic', None),
     CAR.K7_HEV_YG_20: dbc_dict('hyundai_kia_generic', None),
-    CAR.K8_EX_21: dbc_dict('hyundai_kia_generic', None),
-    CAR.K8_EX_HEV_21: dbc_dict('hyundai_kia_generic', None),
+    CAR.K8_EX: dbc_dict('hyundai_kia_generic', None),
+    CAR.K8_EX_HEV: dbc_dict('hyundai_kia_generic', None),
     CAR.SELTOS_SP2: dbc_dict('hyundai_kia_generic', None),
     CAR.SOUL_EV_SK3: dbc_dict('hyundai_kia_generic', None),
     CAR.MOHAVE_HM: dbc_dict('hyundai_kia_generic', None),
